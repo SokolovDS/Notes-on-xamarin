@@ -1,0 +1,7 @@
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\ZAMETOCHKI.Android.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\Java.Interop.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\System.Core.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\System.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\mscorlib.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\System.Runtime.Serialization.dll
