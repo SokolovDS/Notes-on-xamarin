@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0.10586": {
+    "UAP,Version=v10.0": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -2159,7 +2159,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-arm": {
+    "UAP,Version=v10.0/win10-arm": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -4425,7 +4425,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-arm-aot": {
+    "UAP,Version=v10.0/win10-arm-aot": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -6727,7 +6727,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x64": {
+    "UAP,Version=v10.0/win10-x64": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -9002,7 +9002,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x64-aot": {
+    "UAP,Version=v10.0/win10-x64-aot": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -11313,7 +11313,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x86": {
+    "UAP,Version=v10.0/win10-x86": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -13588,7 +13588,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x86-aot": {
+    "UAP,Version=v10.0/win10-x86-aot": {
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -22236,7 +22236,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Xamarin.Forms >= 2.3.3.193"
     ],
-    "UAP,Version=v10.0.10586": []
+    "UAP,Version=v10.0": []
   },
   "packageFolders": {
     "C:\\Users\\Daniil\\.nuget\\packages\\": {}
@@ -22257,6 +22257,11 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "uap10.0": {
+          "projectReferences": {}
+        }
       }
     },
     "dependencies": {
@@ -22264,7 +22269,7 @@
       "Xamarin.Forms": "2.3.3.193"
     },
     "frameworks": {
-      "uap10.0.10586": {}
+      "uap10.0": {}
     },
     "runtimes": {
       "win10-arm": {
