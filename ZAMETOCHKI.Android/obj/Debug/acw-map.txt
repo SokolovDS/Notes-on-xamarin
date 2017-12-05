@@ -2,3 +2,7 @@ ZAMETOCHKI.Droid.MainActivity, ZAMETOCHKI.Android;md57dcda53c6e674f4ef84f6914316
 ZAMETOCHKI.Droid.MainActivity, ZAMETOCHKI.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57dcda53c6e674f4ef84f69143164ae9c.MainActivity
 ZAMETOCHKI.Droid.MainActivity;md57dcda53c6e674f4ef84f69143164ae9c.MainActivity
 zametochki.droid.MainActivity;md57dcda53c6e674f4ef84f69143164ae9c.MainActivity
+ZAMETOCHKI.Droid.MemoActivity, ZAMETOCHKI.Android;md57dcda53c6e674f4ef84f69143164ae9c.MemoActivity
+ZAMETOCHKI.Droid.MemoActivity, ZAMETOCHKI.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57dcda53c6e674f4ef84f69143164ae9c.MemoActivity
+ZAMETOCHKI.Droid.MemoActivity;md57dcda53c6e674f4ef84f69143164ae9c.MemoActivity
+zametochki.droid.MemoActivity;md57dcda53c6e674f4ef84f69143164ae9c.MemoActivity

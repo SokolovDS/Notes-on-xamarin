@@ -15,7 +15,15 @@ C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Andr
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\R.cs.flag
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\uploadflags.txt
-C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\res\layout\note.xml
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.dll.mdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\android\assets\ZAMETOCHKI.Android.dll.mdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLite-net.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLite-net.pdb
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLite-net.xml
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\res\layout\memo.xml

@@ -6,6 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SQLite;
+using System.Collections;
+using System.Collections.Generic;
+using static ZAMETOCHKI.Droid.SQLite;
 
 namespace ZAMETOCHKI.Droid
 {
@@ -14,7 +18,7 @@ namespace ZAMETOCHKI.Droid
 	{
 		int count = 1;
 
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -26,15 +30,19 @@ namespace ZAMETOCHKI.Droid
 			Button button = FindViewById<Button> (Resource.Id.myButton);
             var AddButton = FindViewById<ImageButton>(Resource.Id.AddButton);
 
+
             button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 			};
             AddButton.Click += delegate
             {
-                SetContentView(layoutResID: Resource.Layout.Note);
+                Intent intent = new Intent(this, typeof(MemoActivity));
+                StartActivity(intent);
             };
-		}
-	}
+
+
+        }
+    }
 }
 
 

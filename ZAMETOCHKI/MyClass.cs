@@ -6,7 +6,8 @@ namespace ZAMETOCHKI
 	{
 		public MyClass ()
 		{
-		}
+           
+        }
 	}
 }
 
