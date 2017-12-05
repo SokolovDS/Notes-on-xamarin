@@ -2,7 +2,6 @@ C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Andr
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.pdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.apk
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android-Signed.apk
-C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csproj.CoreCompileInputs.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.dll
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.pdb
@@ -16,5 +15,7 @@ C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Andr
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\R.cs.flag
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\uploadflags.txt
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\res\layout\note.xml
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.dll.mdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\android\assets\ZAMETOCHKI.Android.dll.mdb
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache

@@ -29,6 +29,10 @@ namespace ZAMETOCHKI.Droid
             button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 			};
+            AddButton.Click += delegate
+            {
+                SetContentView(layoutResID: Resource.Layout.Note);
+            };
 		}
 	}
 }

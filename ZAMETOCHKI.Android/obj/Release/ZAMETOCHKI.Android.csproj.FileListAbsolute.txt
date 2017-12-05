@@ -18,3 +18,4 @@ C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Andr
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Release\ZAMETOCHKI.Android.dll.mdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\android\assets\ZAMETOCHKI.Android.dll.mdb
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Release\res\layout\note.xml
