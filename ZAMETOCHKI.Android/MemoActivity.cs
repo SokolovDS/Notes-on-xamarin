@@ -24,27 +24,28 @@ namespace ZAMETOCHKI.Droid
             var NoteHeader = FindViewById<EditText>(Resource.Id.NoteHeader);
             var NoteText = FindViewById<EditText>(Resource.Id.NoteText);
 
-
-
             // Create your application here
             string header = "";
             string text="";
 
             NoteHeader.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-
                 header = e.Text.ToString();
 
             };
 
             NoteText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
-
                 text = e.Text.ToString();
 
             };
 
             SaveButton.Click += delegate
             {
-                DoSomeDataAccess(header, text);
+                ZAMETOCHKI.Droid.SQLite.DoSomeDataAccess(header, text);
+                List<Memo> memos = SQLite.GetAllData();
+                foreach (Memo memo in memos)
+                {
+                    Console.WriteLine(memo.Header);
+                }
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
             };

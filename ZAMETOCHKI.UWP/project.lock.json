@@ -27392,6 +27392,11 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "uap10.0.10586": {
+          "projectReferences": {}
+        }
       }
     },
     "dependencies": {
