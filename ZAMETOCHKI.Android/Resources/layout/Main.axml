@@ -23,7 +23,7 @@
             android:paddingEnd="24dp"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
-            android:src="@android:drawable/ic_input_add"
+            android:src="@drawable/plus"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
         <Button

@@ -13,7 +13,7 @@ using static ZAMETOCHKI.Droid.SQLite;
 
 namespace ZAMETOCHKI.Droid
 {
-	[Activity (Label = "ZAMETOCHKI.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "ZAMETOCHKI.Android", MainLauncher = true, Icon = "@drawable/icon", NoHistory = true)]
 	public class MainActivity : Activity
 	{
 		int count = 1;
@@ -22,25 +22,34 @@ namespace ZAMETOCHKI.Droid
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
+            Button button = FindViewById<Button> (Resource.Id.myButton);
             Button DeleteButton = FindViewById<Button>(Resource.Id.DeleteAllButton);
-
+            
             var AddButton = FindViewById<ImageButton>(Resource.Id.AddButton);
-
-
+            
             LinearLayout llMain = (LinearLayout)FindViewById(Resource.Id.llMain);
 
-            //Список всех заметок
+            //Получаем список всех элементов
             List<Memo> memos = SQLite.GetAllData();
+
+            //Сортировка по дате создания
+            memos.Sort(delegate (Memo us1, Memo us2)
+            { return us2.CreationTime.CompareTo(us1.CreationTime); });
+
+            //Вывод их
             foreach (Memo memo in memos)
             {
                 Button memoHeader = new Button(this);
                 memoHeader.Text = memo.Header;
+                memoHeader.Click += delegate
+                {
+                    Intent intent = new Intent(this, typeof(MemoActivity));
+                    intent.PutExtra("MemoID", memo.Id);
+                    intent.PutExtra("isCreated", true);
+                    StartActivity(intent);
+                };
                 llMain.AddView(memoHeader);
                 Console.WriteLine(memo.Header);
             }
@@ -49,11 +58,13 @@ namespace ZAMETOCHKI.Droid
 				button.Text = string.Format ("{0} clicks!", count++);
             };
 
+            //Удаление всех заметок
             DeleteButton.Click += delegate {
                 DeleteAllMemos();
+                llMain.RemoveViews(0, llMain.ChildCount);
             };
 
-            //Кнопка для создания заметки
+            //Переход к созданию заметки
             AddButton.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(MemoActivity));
@@ -62,6 +73,7 @@ namespace ZAMETOCHKI.Droid
 
 
         }
+        
     }
 }
 
