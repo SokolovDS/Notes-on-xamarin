@@ -27,14 +27,12 @@ namespace ZAMETOCHKI.Droid
             //Текст
             var NoteText = FindViewById<EditText>(Resource.Id.NoteText);
 
-            
+
             string header = "";
-            string text="";
+            string text = "";
 
             int MemoID = Intent.GetIntExtra("MemoID", -1);
             bool toEdit = Intent.GetBooleanExtra("isCreated", false);
-
-            
 
             if (toEdit)
             {
@@ -47,8 +45,7 @@ namespace ZAMETOCHKI.Droid
                 SaveButton.Click += delegate
                 {
                     ZAMETOCHKI.Droid.SQLite.EditMemo(CurMemo.Id, header, text);
-                    Intent iintent = new Intent(this, typeof(MainActivity));
-                    StartActivity(iintent);
+                    Finish();
                 };
             }
             else
@@ -56,22 +53,31 @@ namespace ZAMETOCHKI.Droid
                 //Действие при сохранении
                 SaveButton.Click += delegate
                 {
-                    ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
-                    Intent iintent = new Intent(this, typeof(MainActivity));
-                    StartActivity(iintent);
+                    int id = ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
+                    Intent intent = new Intent();
+                    intent.PutExtra("id", id);
+                    SetResult((Result) 1, intent);
+                    Finish();
                 };
             }
 
 
             //Изменение заголовка заметки
-            NoteHeader.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            NoteHeader.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
                 header = e.Text.ToString();
             };
 
             //Изменение текста заметки
-            NoteText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            NoteText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
                 text = e.Text.ToString();
             };
         }
+
+
+
+
+       
     }
 }

@@ -40,7 +40,7 @@ namespace ZAMETOCHKI.Droid
         }
 
         //Создание заметки
-        public static void CreateMemo(String header, String text)
+        public static int CreateMemo(String header, String text)
         {
             _connection.CreateTable<Memo>();
             var newStock = new Memo();
@@ -48,12 +48,8 @@ namespace ZAMETOCHKI.Droid
             newStock.Text = text;
             newStock.CreationTime = DateTime.UtcNow;
             _connection.Insert(newStock);
-            Console.WriteLine("Reading data");
-            var table = _connection.Table<Memo>();
-            foreach (var s in table)
-            {
-                Console.WriteLine(s.Id + " " + s.Header + " " + s.Text);
-            }
+            return newStock.Id;
+
         }
 
         //Изменение заметки
@@ -74,12 +70,32 @@ namespace ZAMETOCHKI.Droid
             return _connection.Table<Memo>().ToList();
         }
 
+        //Получение списка всех заметок
+        public static List<Memo> GetAllDataSorted(int typeofsort)
+        {
+            _connection.CreateTable<Memo>();
+            var stock = _connection.Table<Memo>();
+            var list = _connection.Table<Memo>().ToList();
+            switch (typeofsort)
+            {
+                case 0:
+                    list.Sort(delegate (Memo us1, Memo us2)
+                    { return us2.CreationTime.CompareTo(us1.CreationTime); });
+                    break;
+                case 1:
+                    list.Sort(delegate (Memo us1, Memo us2)
+                    { return us1.Header.CompareTo(us2.Header); });
+                    break;
+                default: break;
+            }
+            return list;
+        }
+
         //Получение данных одной заметки
         public static Memo GetData(int id)
         {
             _connection.CreateTable<Memo>();
             return _connection.Table<Memo>().FirstOrDefault(e => e.Id == id);
-
         }
 
         //Удаление заметки

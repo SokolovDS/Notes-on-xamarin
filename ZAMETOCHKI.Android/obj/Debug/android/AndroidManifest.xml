@@ -4,8 +4,8 @@
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="ZAMETOCHKI.Android" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="ZAMETOCHKI.Android" android:noHistory="true" android:name="md57dcda53c6e674f4ef84f69143164ae9c.MainActivity">
+  <application android:label="ZAMETOCHKI.Android" android:theme="@android:style/Theme.Material.NoActionBar" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <activity android:icon="@drawable/icon" android:label="ZAMETOCHKI.Android" android:name="md57dcda53c6e674f4ef84f69143164ae9c.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

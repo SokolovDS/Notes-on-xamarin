@@ -8,6 +8,9 @@
 package zametochki.android;
 
 public final class R {
+    public static final class array {
+        public static final int sortType=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -15,23 +18,21 @@ public final class R {
         public static final int plus=0x7f020001;
     }
     public static final class id {
-        public static final int AddButton=0x7f050003;
-        public static final int DeleteAllButton=0x7f050004;
-        public static final int NoteHeader=0x7f050007;
-        public static final int NoteText=0x7f050008;
-        public static final int SaveButton=0x7f050009;
-        public static final int linearLayout1=0x7f050001;
-        public static final int llMain=0x7f050005;
-        public static final int myButton=0x7f050000;
-        public static final int spinner1=0x7f050002;
-        public static final int toolbar1=0x7f050006;
+        public static final int AddButton=0x7f060003;
+        public static final int DeleteAllButton=0x7f060001;
+        public static final int NoteHeader=0x7f060006;
+        public static final int NoteText=0x7f060007;
+        public static final int SaveButton=0x7f060008;
+        public static final int linearLayout1=0x7f060000;
+        public static final int llMain=0x7f060004;
+        public static final int sortType=0x7f060002;
+        public static final int toolbar1=0x7f060005;
     }
     public static final class layout {
         public static final int main=0x7f030000;
         public static final int memo=0x7f030001;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int hello=0x7f040000;
+        public static final int app_name=0x7f040000;
     }
 }

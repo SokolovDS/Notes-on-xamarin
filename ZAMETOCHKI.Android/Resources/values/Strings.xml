@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Милый, Click Me!</string>
 	<string name="app_name">ZAMETOCHKI+</string>
+  <string-array name="sortType">
+    <item>По дате</item>
+    <item>По названию</item>
+  </string-array>
 </resources>

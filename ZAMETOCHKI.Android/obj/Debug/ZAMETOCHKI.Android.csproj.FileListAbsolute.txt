@@ -1,3 +1,4 @@
+C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.dll
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.pdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\ZAMETOCHKI.Android.apk
@@ -10,7 +11,6 @@ C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Andr
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLite-net.pdb
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\bin\Debug\SQLite-net.xml
-C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csprojResolveAssemblyReference.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.csproj.CoreCompileInputs.cache
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.dll
 C:\Users\Daniil\Documents\Visual Studio 2017\Projects\ZAMETOCHKI\ZAMETOCHKI.Android\obj\Debug\ZAMETOCHKI.Android.pdb
