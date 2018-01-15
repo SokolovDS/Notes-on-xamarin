@@ -16,20 +16,19 @@ namespace ZAMETOCHKI.Droid
     [Activity(Label = "MemoActivity", NoHistory = true)]
     public class MemoActivity : Activity
     {
+        string header = "";
+        string text = "";
+
+        ActionMenuView amvMenu;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Memo);
-            //Кнопка сохранения
-            Button SaveButton = FindViewById<Button>(Resource.Id.SaveButton);
             //Заголовок
             var NoteHeader = FindViewById<EditText>(Resource.Id.NoteHeader);
             //Текст
             var NoteText = FindViewById<EditText>(Resource.Id.NoteText);
-
-
-            string header = "";
-            string text = "";
 
             int MemoID = Intent.GetIntExtra("MemoID", -1);
             bool toEdit = Intent.GetBooleanExtra("isCreated", false);
@@ -41,25 +40,11 @@ namespace ZAMETOCHKI.Droid
                 text = CurMemo.Text;
                 NoteHeader.Text = CurMemo.Header;
                 NoteText.Text = CurMemo.Text;
-                //Действие при сохранении
-                SaveButton.Click += delegate
-                {
-                    ZAMETOCHKI.Droid.SQLite.EditMemo(CurMemo.Id, header, text);
-                    Finish();
-                };
             }
-            else
-            {
-                //Действие при сохранении
-                SaveButton.Click += delegate
-                {
-                    int id = ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
-                    Intent intent = new Intent();
-                    intent.PutExtra("id", id);
-                    SetResult((Result) 1, intent);
-                    Finish();
-                };
-            }
+
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "";
 
 
             //Изменение заголовка заметки
@@ -75,9 +60,35 @@ namespace ZAMETOCHKI.Droid
             };
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.memo_menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
 
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
 
+            int MemoID = Intent.GetIntExtra("MemoID", -1);
+            bool toEdit = Intent.GetBooleanExtra("isCreated", false);
 
-       
+            if (toEdit)
+            {
+                    ZAMETOCHKI.Droid.SQLite.EditMemo(MemoID, header, text);
+                    Finish();
+            }
+            else
+            {
+                    int id = ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
+                    Intent intent = new Intent();
+                    intent.PutExtra("id", id);
+                    SetResult((Result)1, intent);
+                    Finish();
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
     }
 }

@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>10.01.2018 16:28:49</xs:documentation>
+    <xs:documentation>13.01.2018 21:23:26</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16980,11 +16980,13 @@
             <xs:enumeration value="@id/DeleteAllButton" />
             <xs:enumeration value="@id/linearLayout1" />
             <xs:enumeration value="@id/llMain" />
+            <xs:enumeration value="@id/menu_create" />
+            <xs:enumeration value="@id/menu_preferences" />
+            <xs:enumeration value="@id/menu_save" />
             <xs:enumeration value="@id/NoteHeader" />
             <xs:enumeration value="@id/NoteText" />
-            <xs:enumeration value="@id/SaveButton" />
             <xs:enumeration value="@id/sortType" />
-            <xs:enumeration value="@id/toolbar1" />
+            <xs:enumeration value="@id/toolbar" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />
@@ -31741,6 +31743,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@style/MyTheme" />
             <xs:enumeration value="@style/XamarinDesignerCustomAppliedTheme" />
             <xs:enumeration value="@android:style/Animation" />
             <xs:enumeration value="@android:style/Animation.Activity" />
@@ -39004,6 +39007,7 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@style/MyTheme" />
             <xs:enumeration value="@style/XamarinDesignerCustomAppliedTheme" />
             <xs:enumeration value="@android:style/Animation" />
             <xs:enumeration value="@android:style/Animation.Activity" />

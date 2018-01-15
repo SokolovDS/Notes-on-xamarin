@@ -1,0 +1,9 @@
+<menu android:layout_width="300dp" xmlns:android="http://schemas.android.com/apk/res/android"><!--<item
+       android:id="@+id/menu_header"
+       android:actionViewClass="android.widget.EditText"
+       android:showAsAction="ifRoom"
+       android:layout_gravity="left"
+       />--><item android:id="@+id/menu_save" android:icon="@mipmap/ic_action_content_save" android:showAsAction="ifRoom" android:title="Save" /><!--<item
+       android:id="@+id/menu_preferences"
+       android:showAsAction="never"
+       android:title="Preferences" />--></menu>

@@ -3,28 +3,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Toolbar
-        android:background="?android:attr/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar1">
-        <EditText
-            android:inputType="textMultiLine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/NoteHeader"
-            android:hint="Input name"
-            android:layout_marginRight="240.0dp" />
-    </Toolbar>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <EditText
-        android:inputType="textMultiLine"
-        android:id="@+id/NoteText"
-        android:hint="Input text"
+        android:inputType="text"
+        android:id="@+id/NoteHeader"
+        android:hint="Input header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <Button
+    <EditText
+       android:inputType="textMultiLine"
+       android:id="@+id/NoteText"
+       android:hint="Input text"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+    <!--<Button
         android:text="Save"
         android:id="@+id/SaveButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
 </LinearLayout>

@@ -22,15 +22,25 @@ namespace ZAMETOCHKI.Droid
         int spinnerPos = -1;
         int typeOfSort = -1;
 
+        public class MemoButton
+        {
+            public string Header { get; set; }
+            public string Date { get; set; }
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             
             SetContentView(Resource.Layout.Main);
 
-            Spinner sortType = FindViewById<Spinner>(Resource.Id.sortType);
+            Spinner sortType = FindViewById<Spinner>(Resource.Id.menu_spinner);
             Button DeleteButton = FindViewById<Button>(Resource.Id.DeleteAllButton);
-            var AddButton = FindViewById<ImageButton>(Resource.Id.AddButton);
+            
+
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "Заметки!";
 
             LinearLayout llMain = (LinearLayout)FindViewById(Resource.Id.llMain);
 
@@ -44,20 +54,13 @@ namespace ZAMETOCHKI.Droid
                 llMain.RemoveViews(0, llMain.ChildCount);
             };
 
-            //Переход к созданию заметки
-            AddButton.Click += delegate
-            {
-                Intent intent = new Intent(this, typeof(MemoActivity));             
-                StartActivityForResult(intent, REQUEST_ID);
-            };
+            ////Спиннер сортировки
+            //sortType.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            //var adapter = ArrayAdapter.CreateFromResource(
+            //        this, Resource.Array.sortList, Resource.Layout.spinner_item);
 
-            //Спиннер сортировки
-            sortType.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-            var adapter = ArrayAdapter.CreateFromResource(
-                    this, Resource.Array.sortType, Android.Resource.Layout.SimpleSpinnerDropDownItem);
-
-            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-            sortType.Adapter = adapter;
+            //adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            //sortType.Adapter = adapter;
         }
 
         protected override void OnStart()
@@ -74,6 +77,40 @@ namespace ZAMETOCHKI.Droid
             foreach (Memo memo in memos)
             {
                 printMemo(memo.Id);
+            }
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.main_menu, menu);
+
+            var item = menu.FindItem(Resource.Id.menu_spinner);
+            Spinner sortType = (Spinner)item.ActionView;
+
+            //Спиннер сортировки
+            sortType.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.sortList, Resource.Layout.spinner_item);
+
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            sortType.Adapter = adapter;
+
+            // item.
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menu_create:
+                    Intent intent = new Intent(this, typeof(MemoActivity));
+                    StartActivityForResult(intent, REQUEST_ID);
+                    Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                        ToastLength.Short).Show();
+                    return base.OnOptionsItemSelected(item);
+                default:
+                    return base.OnOptionsItemSelected(item);
             }
         }
 
@@ -105,6 +142,9 @@ namespace ZAMETOCHKI.Droid
                 intent.PutExtra("isCreated", true);
                 StartActivity(intent);
             };
+            //TextView memoDate = new TextView(this);
+            //memoDate.Text = memo.CreationTime.ToString();
+            //memoHeader.AddView(memoDate);
             llMain.AddView(memoHeader);
         }
 

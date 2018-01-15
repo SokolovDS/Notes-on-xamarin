@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ZAMETOCHKI+</string>
-  <string-array name="sortType">
+  <string-array name="sortList">
     <item>По дате</item>
     <item>По названию</item>
   </string-array>

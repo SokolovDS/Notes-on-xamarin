@@ -31,8 +31,8 @@ namespace ZAMETOCHKI.Droid
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int sortType = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int sortList = 2131099648;
 			
 			static Array()
 			{
@@ -79,32 +79,32 @@ namespace ZAMETOCHKI.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int AddButton = 2131099651;
+			// aapt resource value: 0x7f090001
+			public const int DeleteAllButton = 2131296257;
 			
-			// aapt resource value: 0x7f060001
-			public const int DeleteAllButton = 2131099649;
+			// aapt resource value: 0x7f090003
+			public const int NoteHeader = 2131296259;
 			
-			// aapt resource value: 0x7f060006
-			public const int NoteHeader = 2131099654;
+			// aapt resource value: 0x7f090004
+			public const int NoteText = 2131296260;
 			
-			// aapt resource value: 0x7f060007
-			public const int NoteText = 2131099655;
+			// aapt resource value: 0x7f090002
+			public const int llMain = 2131296258;
 			
-			// aapt resource value: 0x7f060008
-			public const int SaveButton = 2131099656;
+			// aapt resource value: 0x7f090007
+			public const int menu_create = 2131296263;
 			
-			// aapt resource value: 0x7f060000
-			public const int linearLayout1 = 2131099648;
+			// aapt resource value: 0x7f090008
+			public const int menu_save = 2131296264;
 			
-			// aapt resource value: 0x7f060004
-			public const int llMain = 2131099652;
+			// aapt resource value: 0x7f090006
+			public const int menu_spinner = 2131296262;
 			
-			// aapt resource value: 0x7f060002
-			public const int sortType = 2131099650;
+			// aapt resource value: 0x7f090005
+			public const int spinnerItemStyle = 2131296261;
 			
-			// aapt resource value: 0x7f060005
-			public const int toolbar1 = 2131099653;
+			// aapt resource value: 0x7f090000
+			public const int toolbar = 2131296256;
 			
 			static Id()
 			{
@@ -119,11 +119,17 @@ namespace ZAMETOCHKI.Droid
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int Main = 2130968576;
 			
-			// aapt resource value: 0x7f030001
-			public const int Memo = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int Memo = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int spinner_item = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int toolbar = 2130968579;
 			
 			static Layout()
 			{
@@ -135,11 +141,64 @@ namespace ZAMETOCHKI.Droid
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f080000
+			public const int main_menu = 2131230720;
+			
+			// aapt resource value: 0x7f080001
+			public const int memo_menu = 2131230721;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
+		public partial class Mipmap
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int ic_action_content_create = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int ic_action_content_save = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int ic_add_white_36dp = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ic_menu_copy_holo_dark = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int ic_menu_cut_holo_dark = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ic_menu_paste_holo_dark = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ic_menu_search_holo_dark = 2130903046;
+			
+			static Mipmap()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Mipmap()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int app_name = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int app_name = 2131034112;
 			
 			static String()
 			{
@@ -147,6 +206,22 @@ namespace ZAMETOCHKI.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int MyTheme = 2131165184;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

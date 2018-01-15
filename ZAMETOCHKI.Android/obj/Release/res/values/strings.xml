@@ -1,1 +1,1 @@
-<resources><string name="app_name">ZAMETOCHKI+</string><string-array name="sortType"><item>По дате</item><item>По названию</item></string-array></resources>
+<resources><string name="app_name">ZAMETOCHKI+</string><string-array name="sortList"><item>По дате</item><item>По названию</item></string-array></resources>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+        android:id="@+id/menu_spinner"
+        android:title="ActionBar Spinner"
+        android:actionViewClass="android.widget.Spinner"
+        android:background="#ff00"
+        android:showAsAction="ifRoom" />
+  <!--<Spinner
+            android:id="@+id/sortType1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="100" />-->
+  <item
+       android:id="@+id/menu_create"
+       android:icon="@mipmap/ic_add_white_36dp"
+       android:showAsAction="ifRoom"
+       android:title="Create" />
+  <!--<item
+       android:id="@+id/menu_preferences"
+       android:showAsAction="never"
+       android:title="Preferences" />-->
+</menu>
