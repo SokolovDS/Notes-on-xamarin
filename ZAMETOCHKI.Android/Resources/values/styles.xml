@@ -6,4 +6,8 @@
     <item name="android:colorPrimary">#1C1C1C</item>
     <item name="android:titleTextColor">#FFFFFF</item>
   </style>
+  <style name="CustomTextView" parent="@android:style/Widget.TextView">
+    <item name="android:titleTextColor">#A8E4A0</item>
+    <item name="android:textStyle">bold|italic</item>
+  </style>
 </resources>

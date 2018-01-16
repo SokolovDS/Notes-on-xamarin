@@ -12,6 +12,11 @@
        android:icon="@mipmap/ic_action_content_save"
        android:showAsAction="ifRoom"
        android:title="Save" />
+  <item
+       android:id="@+id/menu_delete"
+       android:icon="@mipmap/ic_delete_white_36dp"
+       android:showAsAction="always"
+       android:title="DeleteMemo" />
   <!--<item
        android:id="@+id/menu_preferences"
        android:showAsAction="never"

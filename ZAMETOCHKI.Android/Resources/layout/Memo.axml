@@ -11,7 +11,11 @@
         android:id="@+id/NoteHeader"
         android:hint="Input header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" 
+        android:maxLength="30"
+        android:focusable="true" 
+        android:focusableInTouchMode="true"
+        />
     <EditText
        android:inputType="textMultiLine"
        android:id="@+id/NoteText"

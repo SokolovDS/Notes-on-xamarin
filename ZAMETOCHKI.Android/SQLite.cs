@@ -99,9 +99,9 @@ namespace ZAMETOCHKI.Droid
         }
 
         //Удаление заметки
-        public static void DeleteMemo(Memo memo)
+        public static void DeleteMemo(int Id)
         {
-            _connection.Delete<Memo>(memo.Id);
+            _connection.Delete<Memo>(Id);
         }
 
         //Удаление всех заметок

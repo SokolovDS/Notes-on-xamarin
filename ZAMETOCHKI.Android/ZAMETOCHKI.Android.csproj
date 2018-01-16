@@ -78,7 +78,9 @@
     <AndroidResource Include="Resources\layout\Memo.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\menu\memo_menu.xml" />
+    <AndroidResource Include="Resources\menu\memo_menu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_action_content_create.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_action_content_save.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\ic_menu_copy_holo_dark.png" />
@@ -147,6 +149,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\spinner_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\memo_style.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\listViewTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_delete_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_delete_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_delete_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_delete_white_36dp.png" />
   </ItemGroup>
   <Import Project="..\ZAMETOCHKI\ZAMETOCHKI.projitems" Label="Shared" Condition="Exists('..\ZAMETOCHKI\ZAMETOCHKI.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

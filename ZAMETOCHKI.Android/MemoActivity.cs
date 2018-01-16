@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using static ZAMETOCHKI.Droid.SQLite;
+using Android.Views.InputMethods;
 
 namespace ZAMETOCHKI.Droid
 {
@@ -19,8 +20,6 @@ namespace ZAMETOCHKI.Droid
         string header = "";
         string text = "";
 
-        ActionMenuView amvMenu;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,8 +28,17 @@ namespace ZAMETOCHKI.Droid
             var NoteHeader = FindViewById<EditText>(Resource.Id.NoteHeader);
             //Текст
             var NoteText = FindViewById<EditText>(Resource.Id.NoteText);
+            //NoteHeader.RequestFocus();
 
-            int MemoID = Intent.GetIntExtra("MemoID", -1);
+            //InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+            ////imm.ShowSoftInput(NoteHeader, InputMethodManager.ShowImplicit);
+            //imm.ShowSoftInput(NoteHeader, 0);
+
+            //imm.ToggleSoftInput(0, 0);
+
+            
+
+        int MemoID = Intent.GetIntExtra("MemoID", -1);
             bool toEdit = Intent.GetBooleanExtra("isCreated", false);
 
             if (toEdit)
@@ -46,6 +54,10 @@ namespace ZAMETOCHKI.Droid
             SetActionBar(toolbar);
             ActionBar.Title = "";
 
+
+            InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+            NoteHeader.RequestFocus();
+            imm.ShowSoftInput(NoteHeader, ShowFlags.Implicit);
 
             //Изменение заголовка заметки
             NoteHeader.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
@@ -71,24 +83,36 @@ namespace ZAMETOCHKI.Droid
             Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
                 ToastLength.Short).Show();
 
+            LinearLayout llMain = (LinearLayout)FindViewById(Resource.Id.llMain);
             int MemoID = Intent.GetIntExtra("MemoID", -1);
-            bool toEdit = Intent.GetBooleanExtra("isCreated", false);
-
-            if (toEdit)
+            switch (item.ItemId)
             {
-                    ZAMETOCHKI.Droid.SQLite.EditMemo(MemoID, header, text);
-                    Finish();
-            }
-            else
-            {
-                    int id = ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
-                    Intent intent = new Intent();
-                    intent.PutExtra("id", id);
-                    SetResult((Result)1, intent);
-                    Finish();
-            }
+                case Resource.Id.menu_save:
+                    bool toEdit = Intent.GetBooleanExtra("isCreated", false);
 
-            return base.OnOptionsItemSelected(item);
+                    if (toEdit)
+                    {
+                        ZAMETOCHKI.Droid.SQLite.EditMemo(MemoID, header, text);
+                        Finish();
+                    }
+                    else
+                    {
+                        int id = ZAMETOCHKI.Droid.SQLite.CreateMemo(header, text);
+                        Intent intent = new Intent();
+                        intent.PutExtra("id", id);
+                        SetResult((Result)1, intent);
+                        Finish();
+                    }
+                    return base.OnOptionsItemSelected(item);
+                case Resource.Id.menu_delete:
+                    DeleteMemo(MemoID);
+                    //SetResult((Result)1, intent);
+                    Finish();
+                    //llMain.RemoveView(0, llMain.ChildCount);
+                    return base.OnOptionsItemSelected(item);
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }

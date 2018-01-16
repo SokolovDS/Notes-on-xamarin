@@ -3,22 +3,29 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-  <include
-      android:id="@+id/toolbar"
-      layout="@layout/toolbar" />
-  <Button
-      android:id="@+id/DeleteAllButton"
-      android:text="DeleteAll"
-      android:layout_width="fill_parent"
-      android:layout_height="match_parent"
-      android:layout_gravity="left"
-      android:layout_weight="5" 
-      />
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:id="@+id/llMain"
-      android:orientation="vertical"
-      android:minWidth="25px"
-      android:minHeight="25px" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        
+    </LinearLayout>
+    
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px" />
+    </ScrollView>
 </LinearLayout>
